@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///D:/Porto/Afrizal%20Widya%20Ananta%20%E2%80%94%20Portfolio.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afrizal Widya Ananta — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Afrizal Widya Ananta — Portfolio_files/css2" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --acc:#0E86F0;--acc2:#38A3F9;--acc3:#7CC4FD;
+  --dark:#0D0F14;--dark2:#13161E;--dark3:#1C2130;--dark4:#252A38;
+  --mid:#6B7280;--light:#F4F8FF;--white:#fff;
+  --fm:'Sora',sans-serif;--fb:'DM Sans',sans-serif;
+  --ease:cubic-bezier(.22,.68,0,1.2);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--white);color:var(--dark);overflow-x:hidden;cursor:none}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--dark)}::-webkit-scrollbar-thumb{background:var(--acc);border-radius:4px}
+
+/* ── CURSOR ── */
+*{cursor:none!important}
+.cur-dot{width:8px;height:8px;background:var(--acc);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);will-change:transform}
+.cur-ring{width:36px;height:36px;border:2px solid var(--acc3);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s;opacity:.7;will-change:transform}
+.cur-ring.hov{width:54px;height:54px;border-color:var(--acc);opacity:1}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,15,20,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);height:64px;display:flex;align-items:center;padding:0 5%;transition:transform .35s var(--ease)}
+.nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--fm);font-weight:800;font-size:1.1rem;color:var(--white);letter-spacing:-.03em;display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo-dot{width:8px;height:8px;background:var(--acc);border-radius:50%}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.52);text-decoration:none;font-size:.78rem;font-weight:500;transition:color .2s;font-family:var(--fm)}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-links a.active::after{content:'';display:block;height:2px;background:var(--acc);border-radius:2px;margin-top:2px}
+.btn-nav{background:var(--acc);color:#fff;border:none;padding:.5rem 1.2rem;border-radius:50px;font-family:var(--fm);font-size:.78rem;font-weight:600;cursor:none;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:filter .2s,transform .2s var(--ease)}
+.btn-nav:hover{filter:brightness(1.12);transform:scale(1.04)}
+
+/* ── SECTION COMMONS ── */
+section{padding:90px 5%}
+.si{max-width:1280px;margin:0 auto}
+.stag{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:.66rem;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.7rem}
+.stag::before{content:'';display:block;width:14px;height:2px;background:currentColor;border-radius:2px}
+.stitle{font-family:var(--fm);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-.035em;line-height:1.12}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.4s}
+.btn-pri{background:var(--acc);color:#fff;border:none;padding:.82rem 1.8rem;border-radius:50px;font-family:var(--fm);font-size:.875rem;font-weight:700;cursor:none;display:inline-flex;align-items:center;gap:8px;transition:filter .2s,transform .2s var(--ease),box-shadow .2s;box-shadow:0 8px 32px rgba(14,134,240,.3);text-decoration:none}
+.btn-pri:hover{filter:brightness(1.12);transform:translateY(-2px);box-shadow:0 14px 40px rgba(14,134,240,.45)}
+.btn-out{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.2);padding:.82rem 1.8rem;border-radius:50px;font-family:var(--fm);font-size:.875rem;font-weight:700;cursor:none;transition:border-color .2s,background .2s,transform .2s var(--ease);text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-out:hover{border-color:var(--acc2);background:rgba(14,134,240,.08);transform:translateY(-2px)}
+
+/* ════════════════════════════════
+   1. HOME
+════════════════════════════════ */
+.hero{min-height:100vh;background:var(--dark);display:flex;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden}
+.hero-blob{position:absolute;width:700px;height:700px;background:radial-gradient(ellipse at center,rgba(14,134,240,.14) 0%,transparent 70%);border-radius:50%;top:50%;left:48%;transform:translate(-50%,-50%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(56,163,249,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(56,163,249,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-inner{max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 400px;align-items:center;gap:4rem;position:relative;z-index:1}
+
+/* Left */
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(14,134,240,.13);border:1px solid rgba(14,134,240,.28);color:var(--acc3);font-size:.7rem;font-weight:600;padding:.35rem .9rem;border-radius:50px;margin-bottom:1.4rem;font-family:var(--fm);animation:fadeUp .6s var(--ease) both}
+.hero-pill-dot{width:6px;height:6px;background:var(--acc2);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero-name{font-family:var(--fm);font-size:clamp(2.5rem,5.5vw,4rem);font-weight:800;color:var(--white);line-height:1.06;letter-spacing:-.045em;margin-bottom:.65rem;animation:fadeUp .6s .08s var(--ease) both}
+.hero-name .acc{background:linear-gradient(135deg,var(--acc3),var(--acc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-role{font-family:var(--fm);font-size:clamp(.95rem,1.8vw,1.15rem);font-weight:500;color:rgba(255,255,255,.5);margin-bottom:1.4rem;animation:fadeUp .6s .15s var(--ease) both;letter-spacing:-.01em}
+.hero-desc{color:rgba(255,255,255,.42);font-size:.88rem;line-height:1.78;max-width:480px;margin-bottom:2rem;animation:fadeUp .6s .22s var(--ease) both}
+.hero-stats{display:flex;gap:1rem;margin-bottom:2.2rem;animation:fadeUp .6s .28s var(--ease) both;flex-wrap:wrap}
+.h-stat{background:var(--dark3);border:1px solid rgba(56,163,249,.14);border-radius:12px;padding:.7rem 1rem;text-align:center}
+.h-stat-num{font-family:var(--fm);font-size:1.4rem;font-weight:800;color:var(--acc2);line-height:1;display:block}
+.h-stat-lbl{font-size:.6rem;font-weight:600;color:rgba(255,255,255,.32);text-transform:uppercase;letter-spacing:.06em;margin-top:3px;white-space:nowrap}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp .6s .34s var(--ease) both}
+
+/* Right — photo + float cards */
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:flex-end;height:460px;animation:fadeUp .7s .14s var(--ease) both}
+.hero-photo-frame{width:320px;height:420px;border-radius:160px 160px 24px 24px;overflow:hidden;background:linear-gradient(160deg,var(--dark3),var(--dark4));border:1.5px solid rgba(56,163,249,.15);box-shadow:0 0 80px rgba(14,134,240,.12),inset 0 0 40px rgba(14,134,240,.04);position:relative}
+.hero-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+/* placeholder silhouette if no photo */
+.hero-photo-placeholder{width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center;background:linear-gradient(180deg,rgba(14,134,240,.06) 0%,rgba(14,134,240,.02) 100%)}
+.sil-wrap{position:relative;width:220px;height:380px}
+.sil-hair{width:84px;height:48px;background:#3D2B1F;border-radius:42px 42px 0 0;position:absolute;top:-6px;left:50%;transform:translateX(-50%)}
+.sil-head{width:76px;height:76px;background:linear-gradient(135deg,#FDDBB4,#F4B77A);border-radius:50%;position:absolute;top:0;left:50%;transform:translateX(-50%)}
+.sil-body{width:150px;height:280px;background:linear-gradient(160deg,var(--acc2),var(--acc));border-radius:75px 75px 0 0;position:absolute;top:80px;left:50%;transform:translateX(-50%)}
+.sil-collar{width:50px;height:26px;background:var(--dark3);border-radius:0 0 26px 26px;position:absolute;top:80px;left:50%;transform:translateX(-50%)}
+/* Floating cards */
+.float-card{position:absolute;background:rgba(19,22,30,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:.9rem 1.2rem;font-family:var(--fm)}
+.fc-gpa{top:12%;right:-28px;animation:float 3.4s ease-in-out infinite}
+.fc-intern{bottom:18%;left:-32px;animation:float 3.4s 1.1s ease-in-out infinite}
+.fc-label{font-size:.6rem;color:rgba(255,255,255,.38);font-weight:500;margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em}
+.fc-value{font-size:1.5rem;font-weight:800;color:var(--white);line-height:1}
+.fc-sub{font-size:.62rem;color:var(--acc3);font-weight:600;margin-top:2px}
+.fc-dot{display:inline-block;width:6px;height:6px;background:#34D399;border-radius:50%;margin-right:4px;animation:pulse 1.5s ease-in-out infinite}
+
+/* ════════════════════════════════
+   2. ABOUT ME
+════════════════════════════════ */
+.about-sec{background:var(--light)}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:1280px;margin:0 auto}
+.about-highlights{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.about-hl{background:var(--white);border-radius:14px;padding:1.2rem 1.4rem;border:1px solid rgba(14,134,240,.1);display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s,transform .3s var(--ease),box-shadow .3s;cursor:none}
+.about-hl:hover{border-color:rgba(14,134,240,.35);transform:translateX(6px);box-shadow:4px 0 20px rgba(14,134,240,.07)}
+.ahl-icon{width:40px;height:40px;border-radius:10px;background:rgba(14,134,240,.09);border:1px solid rgba(14,134,240,.18);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.ahl-title{font-family:var(--fm);font-size:.84rem;font-weight:700;color:var(--dark);margin-bottom:.2rem}
+.ahl-desc{font-size:.78rem;color:var(--mid);line-height:1.6}
+.about-summary{font-size:.9rem;color:var(--dark);line-height:1.85;margin-bottom:2rem}
+.about-summary strong{color:var(--acc);font-weight:700}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.info-item{background:var(--white);border-radius:10px;padding:.75rem 1rem;border:1px solid rgba(14,134,240,.08)}
+.info-lbl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--acc);font-family:var(--fm);margin-bottom:.2rem}
+.info-val{font-size:.82rem;font-weight:600;color:var(--dark)}
+
+/* ════════════════════════════════
+   3. EDUCATION
+════════════════════════════════ */
+.edu-sec{background:var(--white)}
+.edu-card{background:var(--dark);border-radius:24px;padding:2.5rem;position:relative;overflow:hidden}
+.edu-card::before{content:'';position:absolute;top:0;right:0;width:300px;height:300px;background:radial-gradient(ellipse at top right,rgba(14,134,240,.13),transparent 60%);pointer-events:none}
+.edu-top{display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.edu-logo{width:58px;height:58px;border-radius:14px;background:rgba(14,134,240,.15);border:1px solid rgba(14,134,240,.25);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+.edu-uni{font-family:var(--fm);font-size:1.2rem;font-weight:800;color:var(--white);margin-bottom:.3rem}
+.edu-deg{font-size:.88rem;color:var(--acc3);font-weight:600;margin-bottom:.25rem}
+.edu-yr{font-size:.76rem;color:rgba(255,255,255,.38)}
+.edu-gpa-box{margin-left:auto;text-align:right}
+.edu-gpa-num{font-family:var(--fm);font-size:2rem;font-weight:800;color:var(--acc2);line-height:1}
+.edu-gpa-lbl{font-size:.65rem;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.06em}
+.edu-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:1.4rem}
+.edu-courses-lbl{font-family:var(--fm);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:.9rem}
+.edu-courses{display:flex;flex-wrap:wrap;gap:.5rem}
+.edu-course{font-size:.74rem;font-weight:600;padding:.28rem .78rem;border-radius:50px;background:rgba(14,134,240,.12);color:var(--acc3);border:1px solid rgba(14,134,240,.2);font-family:var(--fm)}
+
+/* ════════════════════════════════
+   4. EXPERIENCES
+════════════════════════════════ */
+.exp-sec{background:var(--dark);position:relative;overflow:hidden}
+.exp-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(14,134,240,.06) 0%,transparent 60%);pointer-events:none}
+.exp-tabs{display:flex;gap:.5rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.exp-tab{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.48);font-family:var(--fm);font-size:.75rem;font-weight:600;padding:.52rem 1.2rem;border-radius:50px;cursor:none;transition:background .2s,color .2s,border-color .2s}
+.exp-tab:hover{background:rgba(255,255,255,.1);color:var(--white)}
+.exp-tab.act{background:var(--acc);color:#fff;border-color:var(--acc)}
+.exp-panel{display:none}.exp-panel.act{display:block}
+.exp-timeline{position:relative;padding-left:2.4rem}
+.exp-timeline::before{content:'';position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,transparent,rgba(56,163,249,.28) 10%,rgba(56,163,249,.28) 90%,transparent)}
+.exp-item{position:relative;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.05)}
+.exp-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.exp-item::before{content:'';width:12px;height:12px;background:var(--acc);border-radius:50%;position:absolute;left:-2rem;top:5px;border:3px solid var(--dark);box-shadow:0 0 0 2px rgba(14,134,240,.4)}
+.exp-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.45rem;gap:1rem;flex-wrap:wrap}
+.exp-co{font-family:var(--fm);font-size:1rem;font-weight:800;color:var(--white)}
+.exp-badge{background:rgba(14,134,240,.14);border:1px solid rgba(14,134,240,.24);color:var(--acc3);font-size:.64rem;font-weight:700;padding:.22rem .65rem;border-radius:50px;font-family:var(--fm);white-space:nowrap}
+.exp-badge.cur{background:rgba(52,211,153,.14);border-color:rgba(52,211,153,.28);color:#6EE7B7}
+.exp-role{font-family:var(--fm);font-size:.88rem;font-weight:700;color:var(--acc2);margin-bottom:.28rem}
+.exp-loc{font-size:.74rem;color:rgba(255,255,255,.32);margin-bottom:.85rem;display:flex;align-items:center;gap:.3rem}
+.exp-loc::before{content:'📍';font-size:.72rem}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.exp-bullets li{font-size:.82rem;color:rgba(255,255,255,.48);line-height:1.65;display:flex;gap:.55rem}
+.exp-bullets li::before{content:'→';color:var(--acc2);font-size:.78rem;flex-shrink:0;margin-top:.05rem}
+
+/* ════════════════════════════════
+   5. SKILLS & TOOLS  (no bars)
+════════════════════════════════ */
+.skills-sec{background:var(--light)}
+.skills-inner{max-width:1280px;margin:0 auto}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2.5rem}
+.skill-cat{background:var(--white);border-radius:20px;padding:1.8rem;border:1px solid rgba(14,134,240,.1);transition:border-color .3s,transform .3s var(--ease),box-shadow .3s}
+.skill-cat:hover{border-color:rgba(14,134,240,.32);transform:translateY(-4px);box-shadow:0 16px 48px rgba(14,134,240,.09)}
+.sc-head{display:flex;align-items:center;gap:10px;margin-bottom:1.3rem}
+.sc-icon{width:40px;height:40px;border-radius:10px;background:rgba(14,134,240,.09);border:1px solid rgba(14,134,240,.18);display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.sc-title{font-family:var(--fm);font-size:.9rem;font-weight:800;color:var(--dark)}
+/* Tag chips inside skill cats */
+.skill-chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.sk-chip{font-size:.73rem;font-weight:600;padding:.3rem .8rem;border-radius:50px;background:rgba(14,134,240,.07);color:var(--acc);border:1px solid rgba(14,134,240,.15);font-family:var(--fm);transition:background .2s,border-color .2s}
+.sk-chip:hover{background:rgba(14,134,240,.15);border-color:var(--acc)}
+.sk-chip.green{background:rgba(52,211,153,.07);color:#059669;border-color:rgba(52,211,153,.2)}
+.sk-chip.green:hover{background:rgba(52,211,153,.15)}
+/* Cert rows with links */
+.cert-list{display:flex;flex-direction:column;gap:.7rem}
+.cert-item{display:flex;align-items:center;gap:.75rem;padding:.65rem .9rem;border-radius:10px;background:rgba(14,134,240,.05);border:1px solid rgba(14,134,240,.1);transition:background .2s,border-color .2s;text-decoration:none}
+.cert-item:hover{background:rgba(14,134,240,.12);border-color:rgba(14,134,240,.3)}
+.cert-icon{font-size:1rem;flex-shrink:0}
+.cert-info{flex:1}
+.cert-name{font-family:var(--fm);font-size:.78rem;font-weight:700;color:var(--dark)}
+.cert-meta{font-size:.68rem;color:var(--mid);margin-top:1px}
+.cert-badge{font-size:.62rem;font-weight:700;padding:.18rem .5rem;border-radius:4px;background:rgba(52,211,153,.1);color:#059669;border:1px solid rgba(52,211,153,.2);font-family:var(--fm);white-space:nowrap;flex-shrink:0}
+/* Tools grid */
+.tools-wrap{background:var(--white);border-radius:20px;padding:1.8rem;border:1px solid rgba(14,134,240,.1)}
+.tools-title{font-family:var(--fm);font-size:.9rem;font-weight:800;color:var(--dark);margin-bottom:1.4rem;display:flex;align-items:center;gap:.6rem}
+.tools-title::before{content:'';display:block;width:18px;height:3px;background:var(--acc);border-radius:2px}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:.7rem}
+.tool-chip{background:var(--light);border:1px solid rgba(14,134,240,.1);border-radius:12px;padding:.7rem .5rem;display:flex;flex-direction:column;align-items:center;gap:.3rem;transition:border-color .2s,transform .2s var(--ease),box-shadow .2s;cursor:none}
+.tool-chip:hover{border-color:var(--acc);transform:translateY(-3px);box-shadow:0 8px 20px rgba(14,134,240,.1)}
+.tool-emoji{font-size:1.25rem}
+.tool-name{font-size:.62rem;font-weight:700;color:var(--dark);text-align:center;font-family:var(--fm);line-height:1.3}
+
+/* ════════════════════════════════
+   6. PORTFOLIO  (direct links)
+════════════════════════════════ */
+.port-sec{background:var(--white)}
+.port-inner{max-width:1280px;margin:0 auto}
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+.port-card{background:var(--light);border-radius:20px;overflow:hidden;text-decoration:none;display:block;transition:transform .3s var(--ease),box-shadow .3s}
+.port-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(14,134,240,.12)}
+.port-img{width:100%;height:200px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.port-img-bg{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.port-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(13,15,20,.75) 100%)}
+.port-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem}
+.port-p-icon{font-size:2.2rem}
+.port-lbl{position:absolute;bottom:.85rem;left:1rem;font-family:var(--fm);font-size:1.1rem;font-weight:800;color:var(--white);z-index:2}
+.port-arr{position:absolute;top:1rem;right:1rem;width:34px;height:34px;background:var(--acc);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem;z-index:2;transition:transform .2s var(--ease)}
+.port-card:hover .port-arr{transform:rotate(45deg) scale(1.1)}
+.port-coming{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:3}
+.port-coming-pill{background:rgba(14,134,240,.2);border:1px solid rgba(14,134,240,.38);color:var(--acc3);font-family:var(--fm);font-size:.7rem;font-weight:700;padding:.38rem 1rem;border-radius:50px;backdrop-filter:blur(8px)}
+.port-body{padding:1.15rem 1.35rem}
+.port-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.6rem}
+.port-tag{font-size:.65rem;font-weight:600;padding:.2rem .58rem;border-radius:50px;background:rgba(14,134,240,.08);color:var(--acc);border:1px solid rgba(14,134,240,.14);font-family:var(--fm)}
+.port-ttl{font-family:var(--fm);font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:.3rem}
+.port-dsc{font-size:.78rem;color:var(--mid);line-height:1.6}
+
+/* ════════════════════════════════
+   CTA BANNER
+════════════════════════════════ */
+.cta-banner{background:var(--dark);padding:80px 5%;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 50%,rgba(14,134,240,.09) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:680px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.cta-title{font-family:var(--fm);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-.04em;color:var(--white);line-height:1.15;margin-bottom:.7rem}
+.cta-title .acc{background:linear-gradient(135deg,var(--acc3),var(--acc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cta-sub{color:rgba(255,255,255,.42);font-size:.88rem;margin-bottom:2rem;line-height:1.7}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* ════════════════════════════════
+   MARQUEE
+════════════════════════════════ */
+.mq-sec{background:var(--dark2);overflow:hidden;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+.mq-track{display:flex;animation:marquee 30s linear infinite;padding:14px 0}
+.mq-item{display:flex;align-items:center;gap:10px;white-space:nowrap;padding:.45rem 1.2rem;font-family:var(--fm);font-size:.76rem;font-weight:600;color:rgba(255,255,255,.36);border-right:1px solid rgba(255,255,255,.07);flex-shrink:0}
+.mq-star{color:var(--acc2);font-size:.8rem}
+
+/* ════════════════════════════════
+   FOOTER
+════════════════════════════════ */
+footer{background:var(--dark);padding:50px 5% 28px;border-top:1px solid rgba(255,255,255,.06)}
+.ftr-inner{max-width:1280px;margin:0 auto}
+.ftr-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.ftr-desc{color:rgba(255,255,255,.3);font-size:.8rem;line-height:1.7;margin-top:.7rem;max-width:240px}
+.ftr-socials{display:flex;gap:.7rem;margin-top:1.2rem}
+.ftr-soc{width:34px;height:34px;border-radius:50%;background:var(--dark3);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.76rem;color:rgba(255,255,255,.42);cursor:none;transition:background .2s,color .2s,border-color .2s;text-decoration:none}
+.ftr-soc:hover{background:var(--acc);color:#fff;border-color:var(--acc)}
+.ftr-col-ttl{font-family:var(--fm);font-size:.74rem;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:.08em;margin-bottom:1.1rem}
+.ftr-links{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.ftr-links a{color:rgba(255,255,255,.34);text-decoration:none;font-size:.8rem;transition:color .2s}
+.ftr-links a:hover{color:var(--acc3)}
+.ftr-ci{display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.55rem}
+.ftr-ci-i{color:var(--acc2);font-size:.78rem;margin-top:.05rem}
+.ftr-ci-t{color:rgba(255,255,255,.34);font-size:.8rem;line-height:1.4}
+.ftr-btm{border-top:1px solid rgba(255,255,255,.06);padding-top:1.3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem}
+.ftr-copy{color:rgba(255,255,255,.24);font-size:.72rem}
+.ftr-legal{display:flex;gap:1.2rem}
+.ftr-legal a{color:rgba(255,255,255,.24);font-size:.72rem;text-decoration:none;transition:color .2s}
+.ftr-legal a:hover{color:var(--acc3)}
+
+/* ════════════════════════════════
+   ANIMATIONS
+════════════════════════════════ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ════════════════════════════════
+   RESPONSIVE
+════════════════════════════════ */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr}.hero-visual{display:none}
+  .about-inner{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .port-grid{grid-template-columns:1fr 1fr}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .port-grid{grid-template-columns:1fr}.ftr-grid{grid-template-columns:1fr}
+  nav .nav-links{display:none}
+}
+
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease);backdrop-filter:blur(6px)}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal-box{background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:24px;max-width:720px;width:100%;max-height:90vh;overflow-y:auto;transform:translateY(20px) scale(.97);transition:transform .35s var(--ease);position:relative}
+.modal-overlay.open .modal-box{transform:translateY(0) scale(1)}
+.modal-img{width:100%;height:280px;object-fit:cover;border-radius:20px 20px 0 0;display:block;background:var(--dark3)}
+.modal-img-placeholder{width:100%;height:280px;border-radius:20px 20px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;font-size:3rem}
+.modal-img-placeholder p{font-size:.8rem;color:rgba(255,255,255,.3);font-family:var(--fm);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.modal-body{padding:1.8rem 2rem 2rem}
+.modal-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.modal-tag{font-size:.68rem;font-weight:600;padding:.25rem .65rem;border-radius:50px;background:rgba(14,134,240,.1);color:var(--acc3);border:1px solid rgba(14,134,240,.2);font-family:var(--fm)}
+.modal-title{font-family:var(--fm);font-size:1.4rem;font-weight:800;color:var(--white);margin-bottom:.75rem;letter-spacing:-.03em}
+.modal-desc{color:rgba(255,255,255,.5);font-size:.88rem;line-height:1.8;margin-bottom:1.5rem}
+.modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.7);font-size:1rem;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s,color .2s}
+.modal-close:hover{background:rgba(255,255,255,.15);color:#fff}
+.modal-link{display:inline-flex;align-items:center;gap:.5rem;background:var(--acc);color:#fff;padding:.7rem 1.4rem;border-radius:50px;font-family:var(--fm);font-size:.82rem;font-weight:700;text-decoration:none;transition:filter .2s,transform .2s var(--ease)}
+.modal-link:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.modal-link-ghost{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:rgba(255,255,255,.45);padding:.7rem 1.4rem;border-radius:50px;font-family:var(--fm);font-size:.82rem;font-weight:600;border:1px solid rgba(255,255,255,.12);margin-left:.6rem;transition:border-color .2s,color .2s}
+.modal-link-ghost:hover{border-color:rgba(255,255,255,.35);color:var(--white)}
+/* make port-card a div now */
+.port-card{cursor:none}
+</style>
+</head>
+<body style="">
+
+<div class="cur-dot" id="curDot" style="left: 718px; top: 203px;"></div>
+<div class="cur-ring" id="curRing" style="left: 718px; top: 203px;"></div>
+
+<!-- ══════════ NAV ══════════ -->
+<nav id="mainNav" style="transform: translateY(0px);">
+  <div class="nav-inner">
+    <a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#home" class="logo"><span class="logo-dot"></span>AWA</a>
+    <ul class="nav-links">
+      <li><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#home" class="">Home</a></li>
+      
+      <li><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#education" class="">Education</a></li>
+      <li><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#experiences" class="">Experiences</a></li>
+      <li><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#skills" class="">Skills &amp; Tools</a></li>
+      <li><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#portfolio" class="">Portfolio</a></li>
+    </ul>
+    <a href="mailto:anantafrizal@gmail.com" class="btn-nav">Hire Me ↗</a>
+  </div>
+</nav>
+
+<!-- ══════════ 1. HOME ══════════ -->
+<section class="hero" id="home">
+  <div class="hero-blob"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+
+    <!-- LEFT -->
+    <div>
+      <div class="hero-pill"><div class="hero-pill-dot"></div>Available for Opportunities</div>
+      <h1 class="hero-name"><span class="acc">Afrizal Widya<br>Ananta</span></h1>
+      <p class="hero-role">Business Analytics · Product Management · Data Strategy</p>
+      <p class="hero-desc">Management undergraduate at Universitas Airlangga with a strong interest in business analytics and product management. Currently driving merchant data insights at PT Bank Rakyat Indonesia across 18 regional offices.</p>
+      
+      <div class="hero-btns">
+        <a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#experiences" class="btn-pri">Experience ↓</a>
+        <a href="mailto:anantafrizal@gmail.com" class="btn-out">Contact Me ✉️</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: photo + floating cards -->
+    <div class="hero-visual">
+      <div class="hero-photo-frame">
+        <img src="./Afrizal Widya Ananta — Portfolio_files/OPnvHMc.png" alt="Afrizal">
+        
+      </div>
+
+      <!-- Float Card: GPA -->
+      <div class="float-card fc-gpa">
+        <div class="fc-label">Academic GPA</div>
+        <div class="fc-value">3.56</div>
+        <div class="fc-sub">/ 4.00 · Universitas Airlangga</div>
+      </div>
+
+      <!-- Float Card: Current Intern -->
+      <div class="float-card fc-intern">
+        <div class="fc-label">Current Position</div>
+        <div class="fc-value" style="font-size:1.1rem">BusDev Intern</div>
+        <div class="fc-sub"><span class="fc-dot"></span>@ BRI</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq-sec"><div class="mq-track">
+  <div class="mq-item"><span class="mq-star">✦</span>Business Analytics</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Product Management</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Data Processing</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Microsoft Excel</div>
+  <div class="mq-item"><span class="mq-star">✦</span>SQL</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Dashboard Reporting</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Agile Scrum</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Customer Relations</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Merchant Data</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Business Analytics</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Product Management</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Data Processing</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Microsoft Excel</div>
+  <div class="mq-item"><span class="mq-star">✦</span>SQL</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Dashboard Reporting</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Agile Scrum</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Customer Relations</div>
+  <div class="mq-item"><span class="mq-star">✦</span>Merchant Data</div>
+</div></div>
+
+
+
+
+<!-- ══════════ 3. EDUCATION ══════════ -->
+<section class="edu-sec" id="education">
+  <div class="si">
+    <div class="stag reveal visible">Education</div>
+    <h2 class="stitle reveal rd1 visible" style="margin-bottom:2rem">Academic Background</h2>
+    <div class="edu-card reveal rd1 visible">
+      <div class="edu-top">
+        <div class="edu-logo">🎓</div>
+        <div>
+          <div class="edu-uni">Universitas Airlangga</div>
+          <div class="edu-deg">Bachelor Degree — Management</div>
+          <div class="edu-yr">📅 2022 – Present · Surabaya, East Java</div>
+        </div>
+        <div class="edu-gpa-box">
+          <div class="edu-gpa-num">3.56</div>
+          <div class="edu-gpa-lbl">GPA / 4.00</div>
+        </div>
+      </div>
+      <div class="edu-divider"></div>
+      <div class="edu-courses-lbl">Relevant Coursework</div>
+      <div class="edu-courses">
+        <span class="edu-course">Financial Management I &amp; II</span>
+     <span class="edu-course">Human Resources Management</span>
+        <span class="edu-course">Compensation Management</span>
+        <span class="edu-course">Performance Management</span>
+        <span class="edu-course">Introduction to Economic Theory</span>
+        <span class="edu-course">Management Accounting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 4. EXPERIENCES ══════════ -->
+<section class="exp-sec" id="experiences">
+  <div class="si">
+    <div class="stag" style="color:var(--acc3)">Experience</div>
+    <h2 class="stitle reveal visible" style="color:var(--white);margin-bottom:2.5rem">Professional &amp;<br>Organizational Journey</h2>
+    <div class="exp-tabs">
+      <button class="exp-tab act" data-exptab="professional">💼 Professional</button>
+      <button class="exp-tab" data-exptab="organizational">🏛 Organizational</button>
+      <button class="exp-tab" data-exptab="volunteer">🌱 Volunteer</button>
+    </div>
+
+    <!-- PROFESSIONAL -->
+    <div class="exp-panel act" id="ep_professional">
+      <div class="exp-timeline">
+        <div class="exp-item reveal visible">
+          <div class="exp-hdr">
+            <div class="exp-co">PT. Bank Rakyat Indonesia (Persero) Tbk</div>
+            <span class="exp-badge cur">Oct 2025 – Present</span>
+          </div>
+          <div class="exp-role">Business Development Intern — Retail Transaction</div>
+          <div class="exp-loc">Jakarta Pusat, DKI Jakarta</div>
+          <ul class="exp-bullets">
+            <li>Collected, processed, and analyzed nationwide merchant, EDC, and QRIS transaction data from 18 regional offices to evaluate productivity and support business insight reporting.</li>
+            <li>Updated and maintained the merchant tier-shift dashboard to monitor BRI's market coverage and merchant acquisition performance.</li>
+            <li>Analyzed EDC market share across all provinces to identify regional performance trends and support strategic expansion planning.</li>
+            <li>Monitored the national pipeline of padel court merchants as part of BRI's initiative to expand into emerging customer segments.</li>
+            <li>Verified EDC readiness and configured promotional settings during major events: USS 2025, Bryan Adams Concert, and GESREK Festival.</li>
+          </ul>
+        </div>
+        <div class="exp-item reveal rd1 visible">
+          <div class="exp-hdr">
+            <div class="exp-co">PT. PLN (Persero) UP3 Yogyakarta</div>
+            <span class="exp-badge">Jul 2025</span>
+          </div>
+          <div class="exp-role">Customer Relations Intern</div>
+          <div class="exp-loc">Bantul, D.I. Yogyakarta</div>
+          <ul class="exp-bullets">
+            <li>Collected and summarized 10+ customer reviews daily from PLN Mobile to monitor user satisfaction and service performance.</li>
+            <li>Performed data cleaning and filtering in Excel involving 600+ customer entries to ensure accurate reporting.</li>
+            <li>Conducted 200+ daily outbound calls for the prepaid-to-postpaid electricity conversion campaign, improving awareness and conversion rates.</li>
+            <li>Created self-assessment presentations for ULP Wates, supporting internal evaluation and program implementation.</li>
+          </ul>
+        </div>
+        <div class="exp-item reveal rd2 visible">
+          <div class="exp-hdr">
+            <div class="exp-co">Golden Brown Surabaya</div>
+            <span class="exp-badge">Aug – Oct 2023</span>
+          </div>
+          <div class="exp-role">Head of Operations</div>
+          <div class="exp-loc">Surabaya, East Java</div>
+          <ul class="exp-bullets">
+            <li>Managed daily operations across front-end and back-end functions ensuring customer service, cash handling, and inventory consistency.</li>
+            <li>Led a 9-member team, developed SOPs and job descriptions improving productivity and role clarity.</li>
+            <li>Maintained relations with 7 key suppliers, securing competitive terms and improving on-time delivery by ~20%.</li>
+            <li>Contributed to workflow optimization initiatives that drove 106% monthly revenue growth.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORGANIZATIONAL -->
+    <div class="exp-panel" id="ep_organizational">
+      <div class="exp-timeline">
+        <div class="exp-item reveal visible">
+          <div class="exp-hdr">
+            <div class="exp-co">E-Radio FEB UNAIR</div>
+            <span class="exp-badge">Feb – Dec 2024</span>
+          </div>
+          <div class="exp-role">Human Resources Staff</div>
+          <div class="exp-loc">Surabaya, East Java</div>
+          <ul class="exp-bullets">
+            <li>Led planning and execution of 3 HR engagement events — Upgrading, Recharging I, and Farewell E-Radio 2024 — each achieving 75%+ attendance.</li>
+          </ul>
+        </div>
+        <div class="exp-item reveal rd1 visible">
+          <div class="exp-hdr">
+            <div class="exp-co">House Ilmu Indonesia</div>
+            <span class="exp-badge">Oct 2022 – Feb 2023</span>
+          </div>
+          <div class="exp-role">Human Capital Staff</div>
+          <div class="exp-loc">Surabaya, East Java</div>
+          <ul class="exp-bullets">
+            <li>Project leader for "KPI System" development initiative.</li>
+            <li>Awarded "Staff Terdisiplin" for December and January performance.</li>
+            <li>Achieved overall performance appraisal score of 3.30/4.00 ("Good") at end of term.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- VOLUNTEER -->
+    <div class="exp-panel" id="ep_volunteer">
+      <div class="exp-timeline">
+        <div class="exp-item reveal visible">
+          <div class="exp-hdr">
+            <div class="exp-co">Efestaphoria</div>
+            <span class="exp-badge">Nov 2023</span>
+          </div>
+          <div class="exp-role">Operational Committee</div>
+          <div class="exp-loc">Surabaya, East Java</div>
+          <ul class="exp-bullets">
+            <li>Coordinated logistics including accommodation, transportation, permits, and supplies for 4,000+ participants.</li>
+            <li>Designed and implemented health programs and security measures safeguarding all event stakeholders.</li>
+            <li>Liaised with vendors, local authorities, and internal teams to secure legal compliance and seamless execution.</li>
+          </ul>
+        </div>
+        <div class="exp-item reveal rd1 visible">
+          <div class="exp-hdr">
+            <div class="exp-co">SDGs Center Universitas Airlangga</div>
+            <span class="exp-badge">Apr – Dec 2024</span>
+          </div>
+          <div class="exp-role">Volunteer</div>
+          <div class="exp-loc">Surabaya, East Java</div>
+          <ul class="exp-bullets">
+            <li>Assisted in organizing events, seminars, and workshops to promote sustainable development goals.</li>
+            <li>Supported registration, participant guidance, and coordination to ensure smooth event flow.</li>
+            <li>Provided administrative and logistical support contributing to outreach program success.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 5. SKILLS & TOOLS ══════════ -->
+<section class="skills-sec" id="skills">
+  <div class="skills-inner">
+    <div class="stag reveal visible">Skills &amp; Tools</div>
+    <h2 class="stitle reveal rd1 visible" style="margin-bottom:2.5rem">Technical Proficiencies &amp;<br>Toolset</h2>
+
+    <div class="skills-grid" style="grid-template-columns:repeat(3,1fr)">
+
+      <!-- Data & Analytics -->
+      <div class="skill-cat">
+        <div class="sc-head"><div class="sc-icon">📊</div><div class="sc-title">Data &amp; Analytics</div></div>
+        <div style="font-family:var(--fm);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);margin-bottom:.5rem">Skills</div>
+        <div class="skill-chips" style="margin-bottom:1.1rem">
+          <span class="sk-chip">Data Cleaning &amp; Filtering</span>
+          <span class="sk-chip">Dashboard Maintenance</span>
+          <span class="sk-chip">Business Insight Reporting</span>
+          
+          <span class="sk-chip">Market Share Analysis</span>
+          
+          <span class="sk-chip">Performance Monitoring</span>
+        </div>
+        <div style="font-family:var(--fm);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);margin-bottom:.5rem">Tools</div>
+        <div class="skill-chips" style="margin-bottom:1.1rem">
+          <span class="sk-chip">📗 MS Excel</span>
+          <span class="sk-chip">🗃 SQL</span>
+          <span class="sk-chip">📑 Google Sheets</span>
+          <span class="sk-chip">🧩 Whimsical</span>
+        </div>
+        <div style="font-family:var(--fm);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);margin-bottom:.5rem">Certifications</div>
+        <div class="cert-list">
+          <a href="https://www.hackerrank.com/certificates/9605c2dabf17" target="_blank" rel="noopener" class="cert-item">
+            <span class="cert-icon">🗃</span>
+            <div class="cert-info"><div class="cert-name">SQL Basic</div><div class="cert-meta">HackerRank · Verified</div></div>
+            <span class="cert-badge">Verified</span>
+          </a>
+          <a href="https://www.hackerrank.com/certificates/3812907bd1f8" target="_blank" rel="noopener" class="cert-item">
+            <span class="cert-icon">🗃</span>
+            <div class="cert-info"><div class="cert-name">SQL Intermediate</div><div class="cert-meta">HackerRank · Verified</div></div>
+            <span class="cert-badge">Verified</span>
+          </a>
+          <a href="https://www.udemy.com/certificate/UC-8cc1e5d2-baf9-4086-a578-59a8a81f20a0/" class="cert-item">
+            <span class="cert-icon">📗</span>
+            <div class="cert-info"><div class="cert-name">Excel Beginner to Advanced</div><div class="cert-meta">Udemy</div></div>
+            <span class="cert-badge">Done</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project & Business Management -->
+      <div class="skill-cat">
+        <div class="sc-head"><div class="sc-icon">🧠</div><div class="sc-title">Project &amp; Business Management</div></div>
+        <div style="font-family:var(--fm);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);margin-bottom:.5rem">Skills</div>
+        <div class="skill-chips" style="margin-bottom:1.1rem">
+          <span class="sk-chip">Agile Project Management</span>
+          <span class="sk-chip">Scrum Framework</span>
+          
+          
+          
+          
+          <span class="sk-chip">Team Leadership</span>
+        </div>
+        <div style="font-family:var(--fm);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);margin-bottom:.5rem">Tools</div>
+        <div class="skill-chips" style="margin-bottom:1.1rem">
+          <span class="sk-chip">🗂 Jira</span><span class="sk-chip">📒 Confluence</span>
+          
+          <span class="sk-chip">🔷 Figma</span>
+          <span class="sk-chip">📘 MS Word</span>
+          <span class="sk-chip">📊 PowerPoint</span>
+          <span class="sk-chip">📄 Google Docs</span>
+          <span class="sk-chip">🖥 Google Slides</span>
+        </div>
+        <div style="font-family:var(--fm);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);margin-bottom:.5rem">Certifications</div>
+        <div class="cert-list">
+          <a href="https://www.udemy.com/certificate/UC-d7c88ad3-1817-4a66-b5cb-5d655ca53374/?utm_campaign=email&amp;utm_medium=email&amp;utm_source=sendgrid.com" class="cert-item">
+            <span class="cert-icon">⚙️</span>
+            <div class="cert-info"><div class="cert-name">Agile PM + Scrum + Jira</div><div class="cert-meta">Udemy</div></div>
+            <span class="cert-badge">Done</span>
+          </a>
+          <a href="https://www.coursera.org/account/accomplishments/verify/WKT60F28UH0Z" class="cert-item">
+            <span class="cert-icon">⚙️</span>
+            <div class="cert-info"><div class="cert-name">How to Create a Jira SCRUM Project</div><div class="cert-meta">Coursera</div></div>
+            <span class="cert-badge">Done</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Language Proficiency -->
+      <div class="skill-cat">
+        <div class="sc-head"><div class="sc-icon">🌐</div><div class="sc-title">Language Proficiency</div></div>
+        <div style="font-family:var(--fm);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);margin-bottom:.5rem">Skills</div>
+        <div class="skill-chips" style="margin-bottom:1.1rem">
+          <span class="sk-chip">Bahasa Indonesia - Native</span>
+          <span class="sk-chip">English</span>
+          
+          <span class="sk-chip">Presentation &amp; Reporting</span>
+          
+        </div>
+        <div style="font-family:var(--fm);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);margin-bottom:.5rem">Tools</div>
+        <div class="skill-chips" style="margin-bottom:1.1rem">
+          <span class="sk-chip">🎨 Canva</span>
+          <span class="sk-chip">🖼 Photoshop</span>
+          <span class="sk-chip">✍️ Illustrator</span>
+        </div>
+        <div style="font-family:var(--fm);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);margin-bottom:.5rem">Certifications</div>
+        <div class="cert-list">
+          <a href="https://cert.efset.org/en/Q3jijb" target="_blank" rel="noopener" class="cert-item">
+            <span class="cert-icon">🌐</span>
+            <div class="cert-info"><div class="cert-name">EF SET English Certificate</div><div class="cert-meta">72/100 · C2 Proficient · EF Education First</div></div>
+            <span class="cert-badge">C2</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1LuCojeefm7pHuWyA4SY4V6-CjfOOqwDl/view" class="cert-item">
+            <span class="cert-icon">🎓</span>
+            <div class="cert-info"><div class="cert-name">ELPT UNAIR</div><div class="cert-meta">Score 557 · Universitas Airlangga</div></div>
+            <span class="cert-badge">557</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MODAL ══════════ -->
+<div class="modal-overlay" id="projModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div id="modalImgWrap"><img src="./Afrizal Widya Ananta — Portfolio_files/SD7FJ5u.png" class="modal-img" alt="Merchant Tier-Shift Dashboard"></div>
+    <div class="modal-body">
+      <div class="modal-tags" id="modalTags"><span class="modal-tag">Data Analytics</span><span class="modal-tag">Dashboard</span><span class="modal-tag">Excel</span></div>
+      <div class="modal-title" id="modalTitle">Merchant Tier-Shift Dashboard</div>
+      <div class="modal-desc" id="modalDesc">Analyzed nationwide merchant, EDC, and QRIS transaction data from 18 BRI regional offices. Built and maintained a tier-shift dashboard to monitor BRI's market coverage and merchant acquisition performance. Also analyzed EDC market share across all Indonesian provinces to support strategic expansion planning.</div>
+      <div>
+        <a href="https://i.imgur.com/0XFeaEo.png" class="modal-link" id="modalLink" target="_blank" rel="noopener" style="display: none;">🔗 View Project</a>
+        <a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(5).html#" class="modal-link-ghost" id="modalLinkGhost">← Close</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 6. PORTFOLIO ══════════ -->
+<section class="port-sec" id="portfolio">
+  <div class="port-inner">
+    <div class="stag reveal visible">Portfolio</div>
+    <h2 class="stitle reveal rd1 visible">Projects &amp;<br>Work Samples</h2>
+
+    <div class="port-grid">
+
+      <!-- Project 1: BRI
+           Untuk ganti screenshot: isi data-img="URL atau path gambar kamu"
+           Untuk ganti link: isi data-link="https://..."
+      -->
+      <div class="port-card reveal visible" data-link="" data-title="Merchant Tier-Shift Dashboard" data-tags="Data Analytics,Dashboard,Excel" data-img="http://i.imgur.com/SD7FJ5u.png" data-desc="Analyzed nationwide merchant, EDC, and QRIS transaction data from 18 BRI regional offices. Built and maintained a tier-shift dashboard to monitor BRI&#39;s market coverage and merchant acquisition performance. Also analyzed EDC market share across all Indonesian provinces to support strategic expansion planning.">
+        <div class="port-img" style="background:linear-gradient(135deg,#0D2B4E,#0E4A8A)">
+          <img src="./Afrizal Widya Ananta — Portfolio_files/SD7FJ5u(1).png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;display:block">
+          <div class="port-ov"></div>
+          <div class="port-lbl">BRI Analytics</div>
+          <div class="port-arr">↗</div>
+        </div>
+        <div class="port-body">
+          <div class="port-tags"><span class="port-tag">Data Analytics</span><span class="port-tag">Dashboard</span><span class="port-tag">Excel</span></div>
+          <div class="port-ttl">Merchant Tier-Shift Dashboard</div>
+          <div class="port-dsc">Nationwide merchant data analysis across 18 BRI regional offices - supporting acquisition performance and strategic reporting.</div>
+        </div>
+      </div>
+
+      <!-- Project 2: PLN
+           Untuk ganti screenshot: isi data-img="URL atau path gambar kamu"
+           Untuk ganti link: isi data-link="https://..."
+      -->
+      <div class="port-card reveal rd1 visible" data-link="" data-title="SmartFleet IoT Solution" data-tags="Jira, Product Management, Scrum" data-img="https://i.imgur.com/0XFeaEo.png" data-desc="SmartFleet is an IoT-based fleet management platform that helps logistics companies track vehicles in real-time, optimize delivery routes, and improve operational efficiency using AI and machine learning technology.">
+        <div class="port-img" style="background:linear-gradient(135deg,#0D2B4E,#0E4A8A)">
+          <img src="./Afrizal Widya Ananta — Portfolio_files/0XFeaEo.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;display:block">
+          <div class="port-ov"></div>
+          <div class="port-lbl">Smartfleet IoT Solution</div>
+          <div class="port-arr">↗</div>
+        </div>
+        <div class="port-body">
+          <div class="port-tags"><span class="port-tag">Jira</span><span class="port-tag">Product Management</span><span class="port-tag">Scrum</span></div>
+          <div class="port-ttl">SmartFleet IoT Solution - Jira</div>
+          <div class="port-dsc">Scrum Project and Product Required Document</div>
+        </div>
+      </div>
+
+      <!-- Project 3: Coming Soon
+           Ganti data-title, data-desc, data-img, data-link, data-tags sesuai project kamu
+      -->
+      <div class="port-card reveal rd2 visible" data-link="#" data-title="Next Project" data-tags="Open Slot" data-img="" data-desc="Tambahkan deskripsi project kamu di sini dengan mengubah atribut data-desc pada card ini di HTML.">
+        <div class="port-img" style="background:linear-gradient(135deg,var(--dark3),var(--dark4))">
+          <div class="port-placeholder"><div class="port-p-icon">✨</div></div>
+          <div class="port-ov"></div>
+          <div class="port-lbl">Coming Soon</div>
+          <div class="port-arr">↗</div>
+          <div class="port-coming"><div class="port-coming-pill">🚀 Adding Soon</div></div>
+        </div>
+        <div class="port-body">
+          <div class="port-tags"><span class="port-tag">Open Slot</span></div>
+          <div class="port-ttl">Next Project Showcase</div>
+          <div class="port-dsc">Klik untuk lihat detail. Edit atribut data-* di HTML untuk update info project.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<div class="cta-banner">
+  <div class="cta-inner reveal visible">
+    <div class="stag" style="color:var(--acc3);justify-content:center;margin:0 auto .75rem">Let's Connect</div>
+    <h2 class="cta-title">Open to Internships,<br><span class="acc">Collaborations &amp; Opportunities</span></h2>
+    <p class="cta-sub">Actively seeking roles in business analytics, product management, and data-driven strategy. Let's discuss how I can contribute to your team.</p>
+    <div class="cta-btns">
+      <a href="mailto:anantafrizal@gmail.com" class="btn-pri">✉️ Email Me</a>
+      <a href="https://linkedin.com/in/afrizalananta" target="_blank" class="btn-out">LinkedIn →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="ftr-inner">
+    <div class="ftr-grid">
+      <div>
+        <a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#home" class="logo"><span class="logo-dot"></span>AWA</a>
+        <p class="ftr-desc">Management undergraduate passionate about data analytics, product management, and driving business growth through insight-driven strategies.</p>
+        
+      </div>
+      <div>
+        <div class="ftr-col-ttl">Navigation</div>
+        <ul class="ftr-links">
+          <li><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#home">Home</a></li>
+          
+          <li><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#education">Education</a></li>
+          <li><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#experiences">Experiences</a></li>
+          <li><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#skills">Skills &amp; Tools</a></li>
+          <li><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(1).html#portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ftr-col-ttl">Contact</div>
+        <div class="ftr-ci"><span class="ftr-ci-i">✉️</span><span class="ftr-ci-t">anantafrizal@gmail.com</span></div>
+        
+        <div class="ftr-ci"><span class="ftr-ci-i">🔗</span><span class="ftr-ci-t">linkedin.com/in/afrizalananta</span></div>
+        <div class="ftr-ci"><span class="ftr-ci-i">📍</span><span class="ftr-ci-t">DKI Jakarta, Indonesia</span></div>
+      </div>
+    </div>
+    <div class="ftr-btm">
+      <div class="ftr-copy">© 2025 Afrizal Widya Ananta. All Rights Reserved.</div>
+      <div class="ftr-legal"><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(5).html#">Privacy</a><a href="file:///C:/Users/ACER/Downloads/afrizal-portfolio%20(5).html#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* CURSOR */
+const dot=document.getElementById('curDot'),ring=document.getElementById('curRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function tick(){
+  dot.style.left=mx+'px';dot.style.top=my+'px';
+  rx+=(mx-rx)*.14;ry+=(my-ry)*.14;
+  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  requestAnimationFrame(tick);
+})();
+document.querySelectorAll('a,button,.about-hl,.port-card,.tool-chip,.skill-cat,.cert-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>ring.classList.add('hov'));
+  el.addEventListener('mouseleave',()=>ring.classList.remove('hov'));
+});
+
+/* SCROLL REVEAL */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* NAV — active link + hide on scroll down */
+const navLinks=document.querySelectorAll('.nav-links a');
+const sections=['home','about','education','experiences','skills','portfolio'];
+let lastY=0;
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  // hide/show
+  document.getElementById('mainNav').style.transform=(y>lastY&&y>120)?'translateY(-100%)':'translateY(0)';
+  lastY=y;
+  // active
+  let cur='home';
+  sections.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el&&el.getBoundingClientRect().top<80)cur=id;
+  });
+  navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+});
+
+/* SMOOTH SCROLL */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const h=a.getAttribute('href');
+    if(!h||h==='#'||h.startsWith('mailto'))return;
+    e.preventDefault();
+    const t=document.querySelector(h);
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+/* EXPERIENCE TABS */
+document.querySelectorAll('.exp-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.exp-tab').forEach(t=>t.classList.remove('act'));
+    document.querySelectorAll('.exp-panel').forEach(p=>p.classList.remove('act'));
+    tab.classList.add('act');
+    const panel=document.getElementById('ep_'+tab.dataset.exptab);
+    if(panel){
+      panel.classList.add('act');
+      panel.querySelectorAll('.reveal').forEach(el=>{el.classList.remove('visible');setTimeout(()=>obs.observe(el),50)});
+    }
+  });
+});
+
+/* PROJECT MODAL */
+const modal=document.getElementById('projModal');
+const modalClose=document.getElementById('modalClose');
+const modalLinkGhost=document.getElementById('modalLinkGhost');
+
+function openModal(card){
+  const title=card.dataset.title||'';
+  const desc=card.dataset.desc||'';
+  const tags=(card.dataset.tags||'').split(',').filter(Boolean);
+  const img=card.dataset.img||'';
+  const link=card.dataset.link||'#';
+
+  // image or placeholder
+  const imgWrap=document.getElementById('modalImgWrap');
+  if(img){
+    imgWrap.innerHTML=`<img src="${img}" class="modal-img" alt="${title}"/>`;
+  } else {
+    const icon=card.querySelector('.port-p-icon');
+    imgWrap.innerHTML=`<div class="modal-img-placeholder" style="background:${getComputedStyle(card.querySelector('.port-img')).background}">${icon?icon.outerHTML:''}<p>Screenshot coming soon</p></div>`;
+  }
+
+  document.getElementById('modalTitle').textContent=title;
+  document.getElementById('modalDesc').textContent=desc;
+  document.getElementById('modalTags').innerHTML=tags.map(t=>`<span class="modal-tag">${t}</span>`).join('');
+
+  const ml=document.getElementById('modalLink');
+  if(link&&link!=='#'){ml.href=link;ml.style.display='inline-flex'}
+  else{ml.style.display='none'}
+
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeModal(){
+  modal.classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.querySelectorAll('.port-card').forEach(card=>{
+  card.addEventListener('click',()=>openModal(card));
+});
+modalClose.addEventListener('click',closeModal);
+modalLinkGhost.addEventListener('click',e=>{e.preventDefault();closeModal()});
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+</script>
+
+</body></html>
